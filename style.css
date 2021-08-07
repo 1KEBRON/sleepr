@@ -1,0 +1,24 @@
+body{
+    margin:0;
+    font-size: 28px;
+    color: whitesmoke;
+    position:relative;
+    overflow:hidden;
+    background-image:url(https://i.postimg.cc/hjc97Q7y/balls.png);
+    background-position:center;
+    background-size:cover
+}
+a{
+    color: bisque;
+}
+nav{
+    margin: 0%;    
+    padding-left: 80%;
+}
+.nav-pills{
+    align-content: center;
+}
+.container{
+    text-align: center;
+    margin-bottom: 45%;
+}

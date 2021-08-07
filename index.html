@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Sleeepy</title>
 </head>
 <body>
-    <p><a href="index.html">Home</a> | <a href="#">Alarm</a> | <a href="#">About</a></p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <p><a class="navbar-brand" href="index.html">Home</a> | <a class="navbar-brand" href="alarm.html">Alarm</a> | <a class="navbar-brand" href="about.html">About</a></p>
+
+    </nav>
 
     <div class="container">
         <h4>Going to sleep Now</h4>
-        <button>Going to Sleep now </button>
+        <a href="./alarm.html" class="btn btn-primary">Going to Sleep now</a>
         <br>
         <h4>When should I go to bed or wake up?</h4>
-        <button>Pick a time</button>
+        <a href="./alarm.html" class="btn btn-primary">Pick a time</a>
+
     </div>
     <script src="./script.js"></script>
 </body>
