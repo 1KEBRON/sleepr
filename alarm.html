@@ -14,29 +14,62 @@
         <p><a class="navbar-brand" href="index.html">Home</a>  <a class="navbar-brand" href="alarm.html">Alarm</a>  <a  class="navbar-brand" href="about.html">About</a></p>
     </nav>
   <section>
-        <div id="pickTimeCont" class="container">
-            <h2>Pick a time </h2>
-          
-            <ul class="nav nav-pills ">
-                <li class="active"><a data-toggle="pill" href="#reiseTime">Reise Time</a></li>
-                <li><a data-toggle="pill" href="#bedTime">Bed Time</a></li>
+        <div id="pickTimeCont" class="container">    
+            <ul class="nav nav-pills">
+                <li class="active"><a data-toggle="pill" href="#riseTimeCont">Rise Time</a></li>
+                <li><a data-toggle="pill" href="#bedTimeCont">Bed Time</a></li>
+                <li><a data-toggle="pill" href="#activeAlarms">Active Time</a></li>
             </ul>
-        
-            <div class="tab-content">
-
-                <div id="reiseTime" class="tab-pane fade active ">
-                    <h3>Set the wake up alarm on 5th or 6th sleep cycle for best quaility sleep </h3>
-                    
-                </div>
-                <div id="bedTime" class="tab-pane fade">
-                    <h3>Menu 2</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                        rem aperiam.</p>
-                </div>
-        
-            </div>
+             <div class="tab-content">
+                 <div id="riseTimeCont" class="tab-pane fade in active">
+                     <h3>Going to bed at..... </h3>
+                        
+                     <input type="time" name="riseTime" id="riseTimeInp" required> 
+                     
         </div>
-  </section>
+        <div id="bedTimeCont" class="tab-pane fade">
+                    <h3>Planing on waking up at..... </h3>
+                    
+                    <input type="time" name="riseTime" id="riseTimeInp" required>
+                    <div class="table-responsive ">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th># Sleep cycle</th>
+                                    <th>Bed time</th>
+                                    <th>Status </th>
+                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr>
+                                    <td>01</td>
+                                    <td>22:45 AM</td>
+                                    <div class="form-check form-switch">
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                        </td>
+                                    </div>
+                                </tr>
+                                <td>0</td>
+                                <td>22:45 AM</td>
+                                <div class="form-check form-switch">
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    </td>
+                                </div>
+                                </tr> -->
+                            </tbody>
+                        </table>
+        </div>
+        <div id="activeAlarms" class="tab-pane fade">
+            <h3>List of currently active alarms</h3>
+            
+        </div>
+
+    </div>
+</div>
+</section>
 
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
