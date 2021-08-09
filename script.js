@@ -1,10 +1,9 @@
 
 var currentTime = new Date().toLocaleTimeString()
-var timeinp = document.getElementById('timeinp')
 
 var riseTimecycles = [];
 var bedTimecycles = []
-window.addEventListener("load", function(){
+ function populateTable(){
 
 
   // CREATE HTML TABLE STRING
@@ -32,7 +31,7 @@ window.addEventListener("load", function(){
                 </span></label></td>`
     html += "</tr><tr>";
     // CLICK ON CELL TO DO SOMETHING 
-    // html += `<td onclick="FUNCTION()">${data[i]}</td>`;
+    // html += `<td onclick="FUNCTION()">${riseTimecycles[i]}</td>`;
   
     // TO PASS IN A RUNNING NUMBER OR PARAMETER
     // html += `<td onclick="FUNCTION(${i})">${data[i]}</td>`;
@@ -47,32 +46,33 @@ window.addEventListener("load", function(){
 
   // ATTACH HTML TO CONTAINER
   document.getElementById("riseTimeCont").innerHTML = html;
-});
+};
 
 
 
-function addMinutes(time, minsToAdd) {
+function backForwrd(time, minsToAddSubb) {
   function D(J){ return (J<10? '0':'') + J};
   
   var piece = time.split(':');
   
-  var mins = piece[0]*60 + +piece[1] + +minsToAdd;
+  var mins = piece[0]*60 + +piece[1] + +minsToAddSubb;
 
   return D(mins%(24*60)/60 | 0) + ':' + D(mins%60);  
 }  
 
 
-function calcRiseTime (){
-  // array that contains riseTimecycles
-  // var selctedTime = timeinp.value
-  for(var i = 1; i < 7; i++){
-    riseTimecycles.push(addMinutes(currentTime, (i*90)+15));  
+
+$('#timeSubmit').click(function riseBedTimeCalc (){
+    var selectedTime = document.getElementById('selectedTime').value;
+    selectedTime.toLocaleTimeString
+    for(var i = 1; i < 7; i++){
+        riseTimecycles.push(backForwrd(selectedTime, (i*90)+15));
+         bedTimecycles.push(backForwrd(selectedTime, -(i*90)+15));
+        
   }
-
+   populateTable()
   
-}
-
-  calcRiseTime ()
+})
 
 
 
