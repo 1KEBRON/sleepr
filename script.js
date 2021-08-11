@@ -4,7 +4,6 @@ var currentTime = new Date().toLocaleTimeString()
 var riseTimecycles = [];
 var bedTimecycles = []
  function populateRiseTimeTable(){
-   
   // CREATE HTML TABLE STRING
   var perrow = 2, // 2 CELLS PER ROW
       html = "<table><tr>";
@@ -18,7 +17,7 @@ var bedTimecycles = []
     </tr>`
 
   // LOOP THROUGH ARRAY AND ADD TABLE CELLS
-  for (var i=0; i<6; i++) {
+  for (var i=0; i<riseTimecycles.length; i++) {
     // "NORMAL" CELL
    
     html += `<td>${[i+1]}</td>`;
@@ -61,7 +60,7 @@ function populateBedtimeTable(){
     </tr>`
 
   // LOOP THROUGH ARRAY AND ADD TABLE CELLS
-  for (var i=0; i<6; i++) {
+  for (var i=0; i<length; i++) {
     // "NORMAL" CELL
    
     html += `<td>${[i+1]}</td>`;
@@ -118,7 +117,6 @@ $('#riseTimeSubmit').click(function riseBedTimeCalc (){
 
 function changeTab(headlbl){
   $('#headLbl').html(headlbl);
-
   
 }
 
